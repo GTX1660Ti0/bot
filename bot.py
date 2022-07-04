@@ -41,10 +41,10 @@ developers = ['1402716597']
 
 
 addusr = ""
-tk = os.getenv("TOKEN")
-mode = os.getenv("MODE")
+tk = os.getenv("1975993817:AAHkauIhhwRyf6slla4ya_6GUo58O0of85g")
+mode = os.getenv("prod")
 
-posting_channel = os.getenv("CHAT_ID_FORWARD")
+posting_channel = os.getenv("-1001610323514")
 
 if mode == "dev":
 	def run(updater):
@@ -53,7 +53,7 @@ if mode == "dev":
 elif mode == "prod":
 	def run(updater):
 		PORT = int(os.environ.get("PORT", "8443"))
-		HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
+		HEROKU_APP_NAME = os.environ.get("qio01")
 		updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=tk)
 		updater.bot.set_webhook(f"https://{HEROKU_APP_NAME}.herokuapp.com/"+ tk)
 else:
